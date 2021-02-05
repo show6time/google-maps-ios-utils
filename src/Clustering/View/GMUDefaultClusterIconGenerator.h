@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface GMUDefaultClusterIconGenerator : NSObject<GMUClusterIconGenerator>
 
+@property (nonatomic) CGFloat clusterFontSize;
+
 /**
  * Initializes the object with default buckets and auto generated background images.
  */

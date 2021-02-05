@@ -46,6 +46,7 @@ static NSArray<UIColor *> *kGMUBucketBackgroundColors;
 
 - (instancetype)init {
   if ((self = [super init]) != nil) {
+      self.clusterFontSize = 22;
     _iconCache = [[NSCache alloc] init];
     _buckets = @[ @10, @50, @100, @200, @1000 ];
   }
@@ -138,7 +139,7 @@ static NSArray<UIColor *> *kGMUBucketBackgroundColors;
     return icon;
   }
 
-  UIFont *font = [UIFont boldSystemFontOfSize:12];
+    UIFont *font = [UIFont boldSystemFontOfSize: self.clusterFontSize];
   CGSize size = image.size;
   UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
   [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
